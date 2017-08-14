@@ -1,0 +1,301 @@
+/* Put your CSS code in the left column, instead of example, to put or remove unnecessary prefixes. */
+
+body{
+  margin: 0px;
+  padding: 0px;
+  background-color: #e1e1e1;
+
+}
+
+*{
+  border-radius: 20px;
+  -webkit-box-sizing:border-box;
+          box-sizing:border-box;
+}
+#menu_box  a{
+  text-decoration: none;
+  font-family: Comfortaa;
+  font-size: 20px;
+  font-weight: bold;
+
+
+}
+
+.header{
+  background-color:#f1f1f1;
+  /*height: 30%;*/
+  width: 100%;
+
+  -webkit-perspective: 1000px;
+
+          perspective: 1000px;
+  display: grid;
+  /*grid-auto-columns: minmax(auto,500px);*/
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: repeat(3,1fr);
+  /*border: 1px dotted;*/
+
+}
+/* TODO: changer mon adresse */
+#menu_box{
+  background-color: #e5e5e5;
+  border:1px solid black;
+  position: relative;
+  max-width: 400px;
+  min-width: 110px;
+  margin: auto;
+  /*left:30%;*/
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+  /*top: 35%;*/
+  /*width: 200px;*/
+  grid-row: 2/3;
+  grid-column: 2/3;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: repeat(3,1fr);
+  height: auto;
+}
+
+#menu_box button{
+  font-family: Comfortaa;
+  font-size: 24px;
+  opacity: 1;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+  height: 110px;
+  margin: 0px; /* TODO: take ff this */
+  /*padding: 50px 100px;*/
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: darkgrey;
+  z-index: 100;
+  grid-row: 1/4;
+  grid-column: 1/4;
+  /*justify-self:center;*/
+  -webkit-transition: all 500ms linear;
+  -o-transition: all 500ms linear;
+  transition: all 500ms linear;
+}
+
+#top_face{
+  position: absolute;
+  border: 1px solid darkgray;
+  width: 100%;
+  height: 100%;
+  display:grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items:center;
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: repeat(3,1fr);
+  -webkit-transition:-webkit-transform 3000ms cubic-bezier(0.68, -0.55, 0.27, 1.55) 300ms;
+  transition:-webkit-transform 3000ms cubic-bezier(0.68, -0.55, 0.27, 1.55) 300ms;
+  -o-transition:transform 3000ms cubic-bezier(0.68, -0.55, 0.27, 1.55) 300ms ;
+  transition:transform 3000ms cubic-bezier(0.68, -0.55, 0.27, 1.55) 300ms ;
+  transition:transform 3000ms cubic-bezier(0.68, -0.55, 0.27, 1.55) 300ms, -webkit-transform 3000ms cubic-bezier(0.68, -0.55, 0.27, 1.55) 300ms;
+  background: transparent;
+  -webkit-transform-origin: top;
+      -ms-transform-origin: top;
+          transform-origin: top;
+  top:0%;
+  left: 0%;
+  /*z-index: 100;*/
+}
+/*.reveal_top_face{
+  transition:transform 2s ease-in-out 6s ;
+}*/
+
+#top_face a{
+  opacity: 0;
+  -webkit-transform-origin: center;
+      -ms-transform-origin: center;
+          transform-origin: center;
+  -webkit-transform: rotateX(180deg);
+          transform: rotateX(180deg);
+  -webkit-transition: all 3s ease-in-out 1s  ;
+  -o-transition: all 3s ease-in-out 1s  ;
+  transition: all 3s ease-in-out 1s  ;
+  grid-row: 2/3;
+  grid-column: 2/3;
+}
+
+.reveal_top_face{
+  -webkit-transform: rotateX(180deg);
+          transform: rotateX(180deg);
+}
+
+#bottom_face{
+  position: absolute;
+  border: 1px solid darkgray;
+  top:0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  display:grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items:center;
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: repeat(3,1fr);
+  -webkit-transform-origin: bottom;
+      -ms-transform-origin: bottom;
+          transform-origin: bottom;
+  -webkit-transition:-webkit-transform 3000ms cubic-bezier(0.68, -0.55, 0.27, 1.55) 900ms;
+  transition:-webkit-transform 3000ms cubic-bezier(0.68, -0.55, 0.27, 1.55) 900ms;
+  -o-transition:transform 3000ms cubic-bezier(0.68, -0.55, 0.27, 1.55) 900ms;
+  transition:transform 3000ms cubic-bezier(0.68, -0.55, 0.27, 1.55) 900ms;
+  transition:transform 3000ms cubic-bezier(0.68, -0.55, 0.27, 1.55) 900ms, -webkit-transform 3000ms cubic-bezier(0.68, -0.55, 0.27, 1.55) 900ms;
+  background: transparent;
+}
+
+#bottom_face a{
+  opacity: 0;
+  -webkit-transform-origin: center;
+      -ms-transform-origin: center;
+          transform-origin: center;
+  -webkit-transform: rotateX(180deg);
+          transform: rotateX(180deg);
+  -webkit-transition: all 3s ease-in-out 1s  ;
+  -o-transition: all 3s ease-in-out 1s  ;
+  transition: all 3s ease-in-out 1s  ;
+  grid-row: 2/3;
+  grid-column: 2/3;
+}
+
+.reveal_bottom_face{
+  -webkit-transform: rotateX(-180deg);
+          transform: rotateX(-180deg);
+
+}
+
+#right_face{
+  position: absolute;
+  border: 1px solid darkgray;
+  top:0%;
+  left: 0%;
+
+  width: 100%;
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: repeat(3,1fr);
+  -webkit-transform-origin: right;
+      -ms-transform-origin: right;
+          transform-origin: right;
+  height: 100%;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items:center;
+  -webkit-transition:-webkit-transform 3000ms cubic-bezier(0.68, -0.55, 0.27, 1.55) 600ms;
+  transition:-webkit-transform 3000ms cubic-bezier(0.68, -0.55, 0.27, 1.55) 600ms;
+  -o-transition:transform 3000ms cubic-bezier(0.68, -0.55, 0.27, 1.55) 600ms ;
+  transition:transform 3000ms cubic-bezier(0.68, -0.55, 0.27, 1.55) 600ms ;
+  transition:transform 3000ms cubic-bezier(0.68, -0.55, 0.27, 1.55) 600ms, -webkit-transform 3000ms cubic-bezier(0.68, -0.55, 0.27, 1.55) 600ms;
+  background-color: transparent;
+  left:0px;
+  top:0px;
+}
+
+
+.reveal_right_face{
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+
+}
+
+.reveal_link{
+  opacity: 0;
+}
+
+#right_face a {
+  /*opacity: 1;*/
+  -webkit-transform-origin: center;
+      -ms-transform-origin: center;
+          transform-origin: center;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+  -webkit-transition: all 3s ease-in-out 1s  ;
+  -o-transition: all 3s ease-in-out 1s  ;
+  transition: all 3s ease-in-out 1s  ;
+  grid-row: 2/3;
+  grid-column: 2/3;
+}
+/* TODO: borderbsizing to eachface */
+#left_face{
+  position: absolute;
+  border: 1px solid darkgray;
+  top:0%;
+  left: 0%;
+  width: 100%;
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: repeat(3,1fr);
+  height: 100%;
+  background: transparent;
+  -webkit-transform-origin: left;
+      -ms-transform-origin: left;
+          transform-origin: left;
+  display:grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items:center;
+  -webkit-transition:-webkit-transform 3000ms cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  transition:-webkit-transform 3000ms cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  -o-transition:transform 3000ms cubic-bezier(0.68, -0.55, 0.27, 1.55) ;
+  transition:transform 3000ms cubic-bezier(0.68, -0.55, 0.27, 1.55) ;
+  transition:transform 3000ms cubic-bezier(0.68, -0.55, 0.27, 1.55), -webkit-transform 3000ms cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+#left_face a{
+  opacity: 0;
+  -webkit-transform-origin: center;
+      -ms-transform-origin: center;
+          transform-origin: center;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+  -webkit-transition: all 3s ease-in-out 1s  ;
+  -o-transition: all 3s ease-in-out 1s  ;
+  transition: all 3s ease-in-out 1s  ;
+  grid-row: 2/3;
+  grid-column: 2/3;
+}
+.reveal_left_face{
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+}
+
+/*
+#menu_box:hover #left_face a{
+  opacity: 1;
+}
+#menu_box:hover #right_face a{
+  opacity: 1;
+}#menu_box:hover #bottom_face a{
+  opacity: 1;
+}#menu_box:hover #top_face a{
+  opacity: 1;
+}
+#menu_box:hover h2{
+  opacity: 0;
+}
+
+#menu_box:hover #top_face{
+  transform: rotateX(180deg);
+}
+#menu_box:hover #right_face{
+  transform: rotateY(180deg);
+}
+#menu_box:hover #left_face{
+  transform: rotateY(-180deg);
+}
+#menu_box:hover #bottom_face{
+  transform: rotateX(-180deg);
+
+}*/
